@@ -23,7 +23,7 @@ module DatabaseClassMethods
   #returns an array of objects
   def all_as_objects
     table_name = self.to_s.pluralize
-      
+  
     results = CONNECTION.execute("SELECT * FROM #{table_name};")
     
     results_as_objects = []

@@ -8,13 +8,12 @@ require "sqlite3"
 require_relative "database_setup.rb"
 
 # Models
-require_relative "models/course.rb"
-require_relative "models/golfer.rb"
-require_relative "models/outing.rb"
+require_relative "models/articlesorvideo.rb"
+require_relative "models/assignment.rb"
+require_relative "models/groupmember.rb"
 
 # Controllers
-require_relative "controllers/main.rb"
+
 require_relative "controllers/api_controller.rb"
-require_relative "controllers/golfers.rb"
-require_relative "controllers/courses.rb"
+
 

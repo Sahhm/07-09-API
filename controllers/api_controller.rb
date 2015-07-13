@@ -15,9 +15,16 @@ end
 
 
 get "/add_assignment_form" do
-  erb :"add_assignment_form"
-  work_options = {"name" => params["name"], "assignmentlink" => params["assignmentlink"], "contributor_id" => params["group"].to_i}
+  erb :"/main/add_assignment_form"
+  
+
+end
+
+get "/add_assignment" do
+
+  work_options = {"name" => params["name"], "assignmentlink" => params["assignmentlink"], "contributor_id" => params["contributor_id"].to_i}
   Assignment.add(work_options)
+    erb :"/main/add_assignment"
 end
 
 

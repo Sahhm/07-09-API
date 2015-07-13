@@ -1,0 +1,13 @@
+Add an assignment.
+<form action="add_course">
+  <input type="text" placeholder="Enter Assignment Name" name ="name">
+  <input type="numbers" placeholder="Enter Assignment Link" name ="assignmentlink">
+  <select name="contributor_id">
+    <% Groupmember.all_as_objects.each do |member| %>
+      <option value="<%= member.id %>"><%= member.name %></option>
+    <% end %>
+  </select>
+  <br> 
+  <input type="submit">
+</form>  
+     

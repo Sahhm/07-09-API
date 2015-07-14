@@ -35,3 +35,14 @@ get "/group_project" do
   group_options = {"name" => params["members"]}
   erb :"/main/group_project"
 end
+
+get "/single_assignment_form" do
+  erb :"/main/single_assignment_form"
+  
+end
+
+
+get "/single_assignment" do
+  erb :"/main/single_assignment"
+  
+end

@@ -1,18 +1,14 @@
   
 get "/api/assignments" do
-  @assignments = Assignment.all_as_objects
-  @assignment_hash = []
   
-  @assignments.each do |assignment|
-    @assignment_hash << assignment.object_as_hash
-  end
-  
-  json @assignment_hash
+  erb :"api/assignments"
 end
 
 
-get "/api/assignments/:id" do
-  erb :"api/assignments/x"
+get "/api/assignments/:x" do
+ 
+ 
+  erb :"api/assignments/:x"
   
 end
 

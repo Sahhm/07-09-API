@@ -1,0 +1,13 @@
+Which assignment would you like to see?
+
+
+
+<form action="/single_assignment">
+  <select name="assignment_id">
+    <% Assignment.all_as_objects.each do |single| %>
+      <option value="<%= single.id %>"><%= single.name %></option>
+    <% end %>
+  </select>
+  <input type="hidden" name="x" value="<%= params["x"] %>">
+  <input type="submit">
+</form>

@@ -1,0 +1,19 @@
+<ul>
+  <% Assignment.all_as_objects.each do |single| %>
+
+    <%if single.id == params["assignment_id"].to_i%>
+      Assignment ID - <%= single.id %> <br> 
+      Assignment Description - <%=single.name%>  <br>
+      Assignment Link - <a href= "<%=single.assignmentlink%>"><%=single.assignmentlink%></a><br>
+        <%Groupmember.all_as_objects.each do |member|%>
+          <%if member.id == single.contributor_id%>
+            Group Members - <%=member.name%>
+          <% end %>
+        <% end %>
+    <% end %>
+  <% end %>
+</ul>
+
+<ul>
+  <a href="/homepage">Home</a>
+</ul>

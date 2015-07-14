@@ -1,6 +1,7 @@
 require "pry"
 require "sinatra"
 require "sinatra/reloader"
+require "sinatra/json"
 set :bind, '0.0.0.0'
 
 # SQL/Database
@@ -15,5 +16,5 @@ require_relative "models/groupmember.rb"
 # Controllers
 
 require_relative "controllers/api_controller.rb"
-
+require_relative "controllers/main.rb"
 

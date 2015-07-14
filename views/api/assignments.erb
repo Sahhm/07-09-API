@@ -4,7 +4,7 @@ JSON assignment list.
   <% @assignment_hash = [] %>
   
  <% @assignments.each do |assignment|%>
-   <% @assignment_hash << assignment.object_as_hash%>
+   <% @assignment_hash << assignment.objects_as_hash%>
   <%end%>
   
  <%= json @assignment_hash %>

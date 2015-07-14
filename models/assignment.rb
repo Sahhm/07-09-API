@@ -19,7 +19,7 @@ class Assignment
   end
   
 
-  def object_as_hash
+  def objects_as_hash
      hash = {"id" => self.id, "name" => self.name, "assignmentlink" => self.assignmentlink, "contributor_id" => self.contributor_id}
    
      return hash
@@ -31,5 +31,24 @@ class Assignment
      
     return self
   end
+  
+  # def object_as_hash
+  #
+  #   results = CONNECTION.execute("SELECT assignments.name AS assignment, assignments.assignmentlink AS link, assignments.id AS id, groupmembers.name FROM assignments LEFT JOIN groupmembers ON assignments.contributor_id = groupmembers.id;")
+  #   results_as_objects = []
+  #
+  #   results.each do |result_hash|
+  #
+  #     results_as_objects << self.new(result_hash)
+  #
+  #   end
+  #
+  #
+  #   binding.pry
+  #    hash = {"id" => results.id, "assignment" => results.assignment, "assignmentlink" => results.link, "contributors" => results.name}
+  #
+  #    return hash
+  #  end
+  
   
 end

@@ -8,7 +8,14 @@ end
 get "/api/assignments/:x" do
  
  
-  erb :"api/assignments/:x"
+
+  @assignment = Assignment.find(params["x"])
+  
+  @assignment_hash = @assignment.objects_as_hash
+  
+  
+  
+ json @assignment_hash
   
 end
 

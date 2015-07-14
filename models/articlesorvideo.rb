@@ -21,7 +21,7 @@ class Articlesorvideo
 
   
   #method turns new inputs into arguments to update a single line of a database
-  def self.save(new_name, assignment, media_id)
+  def self.save(link, assignment, media_id)
     CONNECTION.execute("UPDATE courses SET medialink = '#{link}', assignment_id = #{assignment} WHERE id = #{media_id};")
      
     return self

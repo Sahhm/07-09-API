@@ -19,7 +19,11 @@ class Assignment
   end
   
 
-
+  def object_as_hash
+     hash = {"id" => self.id, "name" => self.name, "assignmentlink" => self.assignmentlink, "contributor_id" => self.contributor_id}
+   
+     return hash
+   end
   
   #method turns new inputs into arguments to update a single line of a database
   def self.save(new_name, link, groupmember, assignment_id)

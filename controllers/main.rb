@@ -17,21 +17,21 @@ end
 
 
 get "/add_media_link_form" do
-  erb :"add_media_link_form"
+  erb :"/main/add_media_link_form"
 end
 
 get "/add_media_link" do
   media_options = {"medialink" => params["medialink"], "assignment_id" => params["assignment_id"]}
   Articlesorvideo.add(media_options)
-  erb :"add_media_link_form"
+  erb :"/main/add_media_link"
 end
 
 
 get "/group_project_form" do
-  erb :"goroup_project_form"
+  erb :"/main/group_project_form"
 end
 
 get "/group_project" do
-  
-  erb :"goroup_project_form"
+  group_options = {"name" => params["members"]}
+  erb :"/main/group_project"
 end
